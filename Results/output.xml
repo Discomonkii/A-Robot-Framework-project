@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231120 11:56:23.402" rpa="false" schemaversion="4">
+<suite id="s1" name="Nom du rapport" source="C:\development\robotframework\first-project\tests">
+<suite id="s1-s1" name="Amazon" source="C:\development\robotframework\first-project\tests\Amazon.robot">
+<kw name="Insert Testing Data" library="Common" type="SETUP">
+<kw name="Log" library="BuiltIn">
+<arg>Setting up testing suite</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231120 11:56:23.829" level="INFO">Setting up testing suite</msg>
+<status status="PASS" starttime="20231120 11:56:23.828" endtime="20231120 11:56:23.829"/>
+</kw>
+<status status="PASS" starttime="20231120 11:56:23.828" endtime="20231120 11:56:23.829"/>
+</kw>
+<test id="s1-s1-t1" name="User can search" line="20">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231120 11:56:23.831" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20231120 11:56:23.831" endtime="20231120 11:56:26.005"/>
+</kw>
+<status status="PASS" starttime="20231120 11:56:23.830" endtime="20231120 11:56:26.005"/>
+</kw>
+<kw name="Call function with arguments" library="AmazonApp">
+<arg>test1</arg>
+<arg>test2</arg>
+<arg>test3</arg>
+<kw name="Log" library="BuiltIn">
+<arg>This is value1</arg>
+<arg>${value1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231120 11:56:26.005" level="FAIL">Invalid log level 'test1'.</msg>
+<status status="FAIL" starttime="20231120 11:56:26.005" endtime="20231120 11:56:26.005"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>This is value2</arg>
+<arg>${value2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231120 11:56:26.005" endtime="20231120 11:56:26.005"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>This is value3</arg>
+<arg>${value3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20231120 11:56:26.005" endtime="20231120 11:56:26.005"/>
+</kw>
+<status status="FAIL" starttime="20231120 11:56:26.005" endtime="20231120 11:56:26.005"/>
+</kw>
+<kw name="Search for Products" library="AmazonApp">
+<status status="NOT RUN" starttime="20231120 11:56:26.005" endtime="20231120 11:56:26.005"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231120 11:56:26.005" endtime="20231120 11:56:26.005"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231120 11:56:26.015" endtime="20231120 11:56:28.217"/>
+</kw>
+<status status="PASS" starttime="20231120 11:56:26.014" endtime="20231120 11:56:28.217"/>
+</kw>
+<doc>This is my first Testcase</doc>
+<tag>smoke demo</tag>
+<status status="FAIL" starttime="20231120 11:56:23.829" endtime="20231120 11:56:28.218">Invalid log level 'test1'.</status>
+</test>
+<kw name="Cleanup Testing Data" library="Common" type="TEARDOWN">
+<kw name="Log" library="BuiltIn">
+<arg>Cleaning up testing suite</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231120 11:56:28.222" level="INFO">Cleaning up testing suite</msg>
+<status status="PASS" starttime="20231120 11:56:28.221" endtime="20231120 11:56:28.222"/>
+</kw>
+<status status="PASS" starttime="20231120 11:56:28.221" endtime="20231120 11:56:28.222"/>
+</kw>
+<doc>This is a demo testcase</doc>
+<status status="FAIL" starttime="20231120 11:56:23.441" endtime="20231120 11:56:28.222"/>
+</suite>
+<status status="FAIL" starttime="20231120 11:56:23.404" endtime="20231120 11:56:28.225"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">smoke demo</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Nom du rapport">Nom du rapport</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Amazon">Nom du rapport.Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
